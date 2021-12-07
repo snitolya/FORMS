@@ -54,6 +54,55 @@ body{
 }
 
 .select-container select{
+    appearance: none; /*убирание галочки */
+    -webkit-appearance: none;
+}
 
+.checkbox-list{
+    margin-top: 15px;
+}
+.checkbox-container input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+}
+.checkbox-container label{
+    position: relative;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.checkbox-container label::after, .checkbox-container label::before{
+    content:''; /*обязательное свойство, без него не будет работать*/
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+}
+.checkbox-container label::after{
+    width: 22px;
+    height: 22px;
+    background: orange;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+.checkbox-container label::before{
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    background: olive;
+    z-index: 2;
+    opacity: 0;/* прозразность элемента*/
+    transition: all .3s;
+
+}
+
+.checkbox-container{
+    margin-top: 7px;
+}
+.checkbox-container input[type="checkbox"]:checked + label::before{
+    opacity: 1;
+    transition: all .3s;
 }
 
