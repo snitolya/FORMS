@@ -1,0 +1,59 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    width: 400px;
+    padding: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, .3);
+    box-sizing: border-box; 
+}
+.input-container,
+.select-container {
+    position: relative;
+    margin-top: 15px;
+}
+.input-container input[type="text"] ,
+.input-container input[type="tel"] ,
+.input-container input[type="email"] , /*только для type -text будет применено это свойство*/
+.select-container select{
+    display: block;
+    width: 100%;
+    padding: 8px 7px 5px 7px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: orange solid 1px;
+    font-size: 18px;
+    line-height: 22px;
+}
+.input-container input:focus{ /* когда наводишь на цвет цвет становится оранжевым, а если уводишь - чёрным*/
+    color: orange;
+}
+
+.input-container label{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: white;
+    padding: 0px 3px;
+}
+
+.select-container select{
+
+}
+
